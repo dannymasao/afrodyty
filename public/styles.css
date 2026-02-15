@@ -5,8 +5,8 @@
   --muted-card-hover: rgba(255, 255, 255, 0.2);
   --accent-a: #05b5a9;
   --accent-b: #edb401;
-  --shell-width: 810px;
-  --content-x: min(21.43vw, calc((100vw - var(--shell-width)) / 2));
+  --shell-width: 920px;
+  /* --content-x: min(21.43vw, calc((100vw - var(--shell-width)) / 2)); */
 }
 
 * {
@@ -35,10 +35,16 @@ img {
 .page {
   position: relative;
   overflow-x: hidden;
-  background: var(--bg);
+  /* background: var(--bg);
+
+  background-position: bottom;
+  background-repeat: no-repeat; */
+
+  background: url("./img/bg-gradient.png") no-repeat bottom, var(--bg);
+  background-size: contain;
 }
 
-.page::after {
+/* .page::after {
   content: '';
   position: absolute;
   left: 0;
@@ -51,7 +57,7 @@ img {
   background-image: url("./img/bg-gradient.png");
   z-index: 0;
   pointer-events: none;
-}
+} */
 
 .hero {
   position: relative;
@@ -116,7 +122,8 @@ p {
   position: relative;
   z-index: 1;
   width: min(var(--shell-width), calc(100vw - 48px));
-  margin-left: var(--content-x);
+  margin-left: auto;
+  margin-right: auto;
   padding-bottom: 120px;
 }
 
